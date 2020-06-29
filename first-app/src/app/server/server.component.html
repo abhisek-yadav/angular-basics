@@ -1,0 +1,24 @@
+<h3>Hello there! My first server component</h3>
+
+<p>Server with serverId {{serverId}} and serverStatus is {{getServerStatus()}}</p>
+
+<button class="btn btn-primary" [disabled]="!allowAddServer" (click)="onClickAddNewServer()">
+    Add Server
+</button>
+
+<!-- <p *ngIf="isServerCreated">{{addNewServer}}</p> -->
+
+
+<p [ngStyle]="{backgroundColor : getColor()}">{{addNewServer}}</p>
+
+<p *ngFor="let server of servers" [ngStyle]="{backgroundColor: getColor()}">{{server}}</p>
+
+<!-- <p [innerText]="addNewServer"></p>
+
+
+<input type="text" class= "form-control" (input) = "onServerInput($event)"/>
+
+<input type="text" class="form-control" [(ngModel)]="serverInput">
+
+<p [innerText]="serverInput"></p> -->
+
