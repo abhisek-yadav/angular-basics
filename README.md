@@ -1,2 +1,2 @@
 # angular-basics
-Angular 9 basic concepts
+Angular 9 basic concepts.
