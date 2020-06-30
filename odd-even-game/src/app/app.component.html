@@ -1,0 +1,19 @@
+<p appBasicHighlight>Basic Highlight</p>
+<p appBetterHighlight>Better Highlight Renderer</p>
+<app-game (num)="onGameStarted($event)"></app-game>
+<div class="container" *ngFor="let n of nums">
+  <div class="row">
+    <!-- <app-odd *ngIf="n % 2 !== 0" [num]="n"></app-odd> -->
+
+    <!-- using angular provided template -->
+    <ng-template [ngIf]="n % 2 !== 0">
+          <app-odd [num]="n"></app-odd>      
+    </ng-template>
+
+    <!-- with our own structural directive -->
+    <!-- <app-odd *appUnless="n % 2 !== 0" [num]="n"></app-odd> -->
+  </div>
+  <div class="row">
+    <app-even *ngIf="n % 2 === 0" [num]="n"></app-even>
+  </div>
+</div>
