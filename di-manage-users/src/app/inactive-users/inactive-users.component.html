@@ -1,0 +1,19 @@
+<div class="container">
+    <h2>Inactive Users</h2>       
+    <table class="table table-striped" >
+      <thead>
+        <tr>
+          <th>UserID</th>
+          <th>UserName</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let user of inactiveUsers;  let i = index">
+        <tr>
+          <td>{{i}}</td>
+          <td>{{user}}</td>
+          <td> <button type="button" class="btn btn-primary" (click)="setToActive(i)">Set To Active</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
