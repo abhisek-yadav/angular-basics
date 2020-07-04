@@ -1,0 +1,24 @@
+<div class="container">
+    Name<input type="text" class="form-control" [(ngModel)]="name"/>
+    Description<input type="text" class="form-control" [(ngModel)]="desc"/>
+    <button type="button" class="btn btn-primary" (click)= "onClickAddRecipe()">Add Recipe</button>
+    
+  <h2>Recipe List</h2>
+  <table class="table table-bordered table-hover" >
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Description</th>
+          </tr>
+      </thead>
+      <tbody *ngFor="let recipe of recipes">
+          <tr>
+              <td>{{recipe.name}}</td>
+              <td>{{recipe.desc}}</td>
+          </tr>
+      </tbody>
+  </table>
+    
+</div>
+
+

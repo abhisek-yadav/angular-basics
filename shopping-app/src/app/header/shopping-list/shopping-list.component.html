@@ -1,0 +1,12 @@
+<div class="container">
+    <ng-content ></ng-content>
+    <h2>Shopping List</h2>
+    <!-- <app-shopping-item *ngFor="let shoppingItem of shoppingItems" [shoppingItem]="shoppingItem"></app-shopping-item> -->
+    <app-shopping-item (onItemCreated)="onItemAdded($event)"></app-shopping-item>
+   
+    <div class="row" *ngFor="let shoppingItem of shoppingItems">
+        <div class="col-md-1">{{shoppingItem.name}}</div>
+        <div class="col-md-1">{{shoppingItem.price}}</div>
+    </div>
+    
+</div>
