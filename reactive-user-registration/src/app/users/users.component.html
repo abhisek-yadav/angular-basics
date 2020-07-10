@@ -1,0 +1,12 @@
+<div class="container">
+  <form (ngSubmit)="onSubmit()" [formGroup]="userForm">
+    <legend>User Registration</legend>
+    <div class="form-group" formGroupName="user">
+      <label for="">UserName</label>
+      <input type="text" class="form-control" name="username" formControlName="username">
+      <label for="">Email</label>
+      <input type="text" class="form-control" name="email" formControlName="email">
+    </div>
+    <button [disabled]="userForm.invalid" type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
